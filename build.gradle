@@ -1,0 +1,37 @@
+group 'xiangang.wei'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    // servlet-api
+    compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    //spring相关
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.3.RELEASE'
+    compile group: 'org.springframework', name: 'spring-orm', version: '4.3.3.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aspects', version: '4.3.3.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '3.2.0.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '3.2.0.RELEASE'
+    compile 'org.springframework.security:spring-security-web:3.2.0.RELEASE'
+    //hibernate相关
+    compile 'org.hibernate:hibernate-core:4.3.6.Final'
+    //mysql
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.39'
+    //springData
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.3.RELEASE'
+    // https://mvnrepository.com/artifact/log4j/log4j日志
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    //json解析相关
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.5.4'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.5.4'
+
+}
